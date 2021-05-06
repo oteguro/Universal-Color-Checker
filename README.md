@@ -11,4 +11,7 @@ Web browser
 <img width="1008" alt="screen_shot_02" src="https://user-images.githubusercontent.com/492709/117237918-e19d1f00-ae66-11eb-95aa-f85dcb0df7ca.png">
 
 
+## Prebuilt binary
+* You can download zip file from [here](https://github.com/oteguro/Universal-Color-Checker/releases/download/0.01/Universal-Color-Checker.zip "zipfile").
+
 
