@@ -23,8 +23,8 @@ Web browser
 * Run ColorChecker.exe.
 * In the first dialog, you can choose the window you want to capture, emulation LUT, and correction LUT.
 * Hit the preview button and you can see the color emulation window you choose.
-* If you hit the F1~F4 key, you can change emulation LUT. / F1:P, F2:D, F3:T, F4:C(Passthrough)
-* You can hit F5 to toggle color collection LUT.
+* If you hit the F1~F4 key, you can change emulation LUT. / F1:P, F2:D, F3:T, F4:C(Pass-through)
+* Hit F5 key to toggle color collection LUT.
 
 ## Reference
 * CBLUTGen (https://github.com/andrewwillmott/colour-blind-luts)
