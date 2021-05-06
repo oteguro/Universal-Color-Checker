@@ -26,8 +26,8 @@ Web browser
 * You can hit F5 to toggle color collection LUT.
 
 ## Reference
-* [CBLUTGen] (https://github.com/andrewwillmott/colour-blind-luts "Link")
-* [Windows10のウィンドウキャプチャAPI] (https://qiita.com/eguo/items/90604787a6098af404d9 "Link")
+* CBLUTGen (https://github.com/andrewwillmott/colour-blind-luts)
+* Windows10のウィンドウキャプチャAPI (https://qiita.com/eguo/items/90604787a6098af404d9)
 
 ## License
 * This source code is licensed MIT. See LICENSE for details.
