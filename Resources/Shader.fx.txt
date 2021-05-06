@@ -1,0 +1,35 @@
+struct VS_INPUT
+{
+	float4 position : POSITION;
+	float2 uv       : TEXCOORD;
+};
+
+struct PS_INPUT
+{
+	float4 position : SV_POSITION;
+	float2 uv       : TEXCOORD;
+};
+
+Texture2D    g_texture : register(t0); // Window 
+Texture3D    g_lut1    : register(t1); // Emulation LUT 
+Texture3D    g_lut2    : register(t2); // Color collection LUT 
+SamplerState g_sampler : register(s0);
+
+float4 UvScale : register(b0);
+
+PS_INPUT VS(VS_INPUT input)
+{
+	PS_INPUT output = (PS_INPUT)0;
+	output.position = float4(input.position.xyz,1);
+	output.uv = input.uv * UvScale.xy;
+
+	return output;
+}
+
+float4 PS(PS_INPUT input) : SV_TARGET
+{
+	float4 color = g_texture.Sample(g_sampler, input.uv).xyzw;
+	float3 lutColor = g_lut2.Sample(g_sampler, saturate(color.xyz));
+	       lutColor = g_lut1.Sample(g_sampler, saturate(lutColor.xyz));
+	return float4(lutColor.xyz, 1);
+}
